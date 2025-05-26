@@ -71,7 +71,7 @@ header a:hover {
 /* Player Section Column */
 .player-section-column {
     flex: 1;
-    min-width: 250px; /* Adjust as needed for content */
+    min-width: 250px; 
     box-sizing: border-box;
     padding: 10px;
     min-height: 220px;
@@ -90,64 +90,64 @@ header a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start; /* Align cards to the start of the row */
+    justify-content: flex-start; 
     align-items: flex-start;
     gap: 5px;
     box-sizing: border-box;
     padding: 5px;
     min-height: 180px;
-    overflow: visible; /* Make sure cards are not clipped if they overflow slightly */
+    overflow: visible; 
 }
 
 /* Player Card */
 .player-card {
-    background: #1A1A1A; /* Dark grey background for cards */
-    border: 1px solid #F58426; /* Knicks Orange border for cards */
+    background: #1A1A1A; 
+    border: 1px solid #F58426; 
     border-radius: 4px;
     padding: 5px;
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Shadow for dark theme */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5); 
 
-    width: 80px;  /* Fixed width */
-    height: 130px; /* Fixed height */
+    width: 80px;  
+    height: 130px; 
     
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0; 
     
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; /* Distribute name and image */
-    overflow: hidden; /* Hide internal overflow if content is too big */
+    justify-content: space-around; 
+    overflow: hidden; 
 }
 
 .player-card h3 {
-    color: #FFFFFF; /* White text for player names */
+    color: #FFFFFF; 
     font-size: 0.8em;
     font-weight: 600;
     margin: 3px 0;
     width: 100%;
-    min-height: 1.5em; /* Ensure space for name */
+    min-height: 1.5em; 
 }
 
 .player-card img {
     display: block;
-    width: 60px;  /* Fixed image width */
-    height: 90px; /* Fixed image height */
+    width: 60px;  
+    height: 90px; 
     object-fit: cover;
     border-radius: 3px;
-    background-color: #333333; /* Darker placeholder background for image area */
+    background-color: #333333; 
 }
 
 /* Footer Styles */
 footer {
-    background: #1A1A1A; /* Dark grey footer */
-    color: #FFFFFF; /* White text in footer */
+    background: #1A1A1A; 
+    color: #FFFFFF; 
     text-align: center;
     padding: 15px 0;
     margin-top: 10px;
     box-sizing: border-box;
-    border-top: 1px solid #444444; /* Separator line for dark theme */
+    border-top: 1px solid #444444; 
 }
 
 footer p {
@@ -167,7 +167,7 @@ footer p {
     }
 }
 
-@media(max-width: 768px) { /* Smaller tablets - stack sections */
+@media(max-width: 768px) { 
     .sections-wrapper {
         flex-direction: column;
         min-height: auto;
@@ -177,7 +177,7 @@ footer p {
         min-width: auto;
         min-height: auto;
         margin-bottom: 10px;
-        border-bottom: 1px solid #444444; /* Separator for stacked sections */
+        border-bottom: 1px solid #444444; 
     }
      .player-section-column:last-child {
         border-bottom: none;
@@ -191,7 +191,7 @@ footer p {
         width: 90px;
         height: 140px;
         margin: 5px;
-        background: #222222; /* Slightly different card bg for stacked view */
+        background: #222222; 
     }
      .player-card img {
         width: 70px;
@@ -199,9 +199,9 @@ footer p {
     }
 }
 
-@media(max-width: 480px) { /* Mobile phones */
+@media(max-width: 480px) { 
     .player-card {
-        width: calc(50% - 10px); /* 2 cards per row */
+        width: calc(50% - 10px); 
         height: 150px;
     }
     .player-card img {
