@@ -1,0 +1,214 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background: #006BB6; /* Knicks Blue */
+    color: #FFFFFF; /* White text */
+    padding: 12px 0;
+    border-bottom: #F58426 3px solid; /* Knicks Orange */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #FFFFFF; /* Ensure header text is white */
+}
+
+header nav ul {
+    padding: 6px 0 0 0;
+    list-style: none;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 10px;
+}
+
+header a {
+    color: #FFFFFF; /* White links */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+header a:hover {
+    color: #BEC0C2; /* Knicks Silver for hover */
+}
+
+/* Sections Wrapper */
+.sections-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #444444; /* Darker border for dark theme */
+    box-sizing: border-box;
+    min-height: 250px;
+}
+
+/* Player Section Column */
+.player-section-column {
+    flex: 1;
+    min-width: 250px; /* Adjust as needed for content */
+    box-sizing: border-box;
+    padding: 10px;
+    min-height: 220px;
+}
+
+.player-section-column h2 {
+    text-align: center;
+    color: #006BB6; /* Knicks Blue for section titles */
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Player Row */
+.player-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start; /* Align cards to the start of the row */
+    align-items: flex-start;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+    min-height: 180px;
+    overflow: visible; /* Make sure cards are not clipped if they overflow slightly */
+}
+
+/* Player Card */
+.player-card {
+    background: #1A1A1A; /* Dark grey background for cards */
+    border: 1px solid #F58426; /* Knicks Orange border for cards */
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Shadow for dark theme */
+
+    width: 80px;  /* Fixed width */
+    height: 130px; /* Fixed height */
+    
+    flex-shrink: 0; /* Prevent shrinking */
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; /* Distribute name and image */
+    overflow: hidden; /* Hide internal overflow if content is too big */
+}
+
+.player-card h3 {
+    color: #FFFFFF; /* White text for player names */
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 3px 0;
+    width: 100%;
+    min-height: 1.5em; /* Ensure space for name */
+}
+
+.player-card img {
+    display: block;
+    width: 60px;  /* Fixed image width */
+    height: 90px; /* Fixed image height */
+    object-fit: cover;
+    border-radius: 3px;
+    background-color: #333333; /* Darker placeholder background for image area */
+}
+
+/* Footer Styles */
+footer {
+    background: #1A1A1A; /* Dark grey footer */
+    color: #FFFFFF; /* White text in footer */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid #444444; /* Separator line for dark theme */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+/* Responsive adjustments */
+@media(max-width: 992px) {
+    .player-card {
+        width: 75px;
+        height: 120px;
+    }
+     .player-card img {
+        width: 55px;
+        height: 82.5px;
+    }
+}
+
+@media(max-width: 768px) { /* Smaller tablets - stack sections */
+    .sections-wrapper {
+        flex-direction: column;
+        min-height: auto;
+        border-bottom: none;
+    }
+    .player-section-column {
+        min-width: auto;
+        min-height: auto;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #444444; /* Separator for stacked sections */
+    }
+     .player-section-column:last-child {
+        border-bottom: none;
+    }
+    .player-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: auto;
+    }
+    .player-card {
+        width: 90px;
+        height: 140px;
+        margin: 5px;
+        background: #222222; /* Slightly different card bg for stacked view */
+    }
+     .player-card img {
+        width: 70px;
+        height: 105px;
+    }
+}
+
+@media(max-width: 480px) { /* Mobile phones */
+    .player-card {
+        width: calc(50% - 10px); /* 2 cards per row */
+        height: 150px;
+    }
+    .player-card img {
+        width: 80px;
+        height: 100px;
+    }
+     .player-card h3 {
+        font-size: 0.9em;
+    }
+}
